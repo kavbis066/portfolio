@@ -111,6 +111,12 @@ header{
 
 .logo{
     max-width: 100px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent);
+}
+
+.logo code{
+    color: var(--clr-dark);
 }
 
 nav{
