@@ -306,6 +306,42 @@ nav{
         left: -1em;
         width: calc(100% + 2em);
     }
+
+    .about-me__skills{
+        font-size: var(--fs-h3);
+        margin-top: 2.5em;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .about-me__skillset{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgba(41, 209, 173, 0.7);
+    }
+
+    .about-me__skillset ul li{
+        list-style: none;
+    }                                                           
+}
+
+@media (min-width: 400px){
+    .about-me__skills{
+        font-size: var(--fs-h3);
+        margin-top: 1.5em;
+        padding: 10px;
+    }
+
+    .about-me__skillset{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: rgba(41, 209, 173, 0.7);
+    }
+
+    .about-me__skillset ul li{
+        list-style: none;
+    }
 }
 
 /* Projects section */
@@ -313,17 +349,56 @@ nav{
     text-align: center;
 }
 
-.portfolio{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.subtext {
+    font-size: 15px;
+    font-weight: var(--fw-reg);
 }
 
-.portfolio__item{
+.project-card {
+    width: 300px;
+    height: 500px;
+    box-shadow: var(--bs);
+    margin: 10px;
+}
+
+.project-card:nth-of-type(odd){
     background: var(--clr-accent);
     overflow: hidden;
 }
 
-.portfolio__img{
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-image {
+    margin: 0 auto;
+    padding: 10px;
+    width: 250px;
+    border-radius: 125px;
+}
+
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+/* .portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+} */
+
+/* .portfolio__item{
+    background: var(--clr-accent);
+    overflow: hidden;
+} */
+
+/* .portfolio__img{
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
                 opacity 250ms linear;
 }
@@ -331,13 +406,13 @@ nav{
 .portfolio__item:focus{
     position: relative;
     z-index: 2;
-}
+} */
 
-.portfolio__img:hover,
+/* .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img{
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: .5;
-}
+}  */
 
 /* Footer */
 
