@@ -11,8 +11,8 @@
     crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,9 +25,9 @@
         </button>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="index.html#project" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="/index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="/index.html#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="/index.html#project" class="nav__link">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -35,17 +35,63 @@
     
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
-            The title <strong>of my project</strong>
+             <strong>Employee Lookup</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">a short subtitle</p>
-        <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        <p class="section__subtitle section__subtitle--intro">A Django CRUD Application</p>
+        <img src="../img/portfolio-02.jpg" alt="" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ex quisquam tempora, explicabo consectetur accusamus natus laborum in aut debitis!</p>
-        <img src="img/portfolio-03.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur modi dolor voluptatum unde dolorum eum officia harum maxime ab.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia vel voluptatum temporibus ad eligendi similique, provident iure inventore nobis?</p>
+        <p>
+            This project was created because I wanted to learn about CRUD operations using Django 
+            and ORM in general. The project is a basic Employee Application where one can create, retrieve, 
+            update and delete records in the Employee table.
+        </p>
+        <p>
+            I was the sole creator of the project. I have utilized the Bootstrap framework to give more 
+            responsiveness to the application. I have used functionalities like search (to search a particular 
+            employee), displaying of records by using the concept of pagination for tables. I have also used the
+            Function-based views in Django (eg, Detail View) to display a particular instance of a table.
+        </p>
+        <p>
+            Here are the list of references I used to develop this application:
+            <ul>
+                <li>
+                    <a href="https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/">
+                        Django CRUD (Create, Retrieve, Update, Delete) Function Based Views
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tutorial101.blogspot.com/2020/04/django-crud-create-read-update-delete.html">
+                        Django CRUD (Create Read Update Delete) Example - Bootstrap Datatable
+                    </a>
+                </li>
+                <li>
+                    <a href="https://efficientcoder.net/django-3-tutorial-and-crud-example-with-mysql-and-bootstrap/">
+                        Django 3 Tutorial & CRUD Example with MySQL and Bootstrap
+                    </a>
+                </li>
+            </ul>
+        </p>
+        <p>
+            For future work, I have to work on beautifying the view pages using bootstrap to make it more
+            user-friendly.
+        </p>
+        <h3>Technologies:</h3>
+        <ul>
+            <li>Django + BootStrap</li>
+            <li>Database: MySQL</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h4>Index page view:</h4>
+        <img class="intro__img" src="../img/project2.JPG" alt="Login page view">
+        <h4>Add new record view:</h4>
+        <img class="intro__img" src="../img/project2.1.JPG" alt="Register page view">
+        <h4>Edit page view:</h4>
+        <img class="intro__img" src="../img/project2.2.JPG" alt="Register page view">
+        <h4>Employee Details view:</h4>
+        <img class="intro__img" src="../img/project2.3.JPG" alt="Register page view">
     </div>
 
     <!-- Footer -->
