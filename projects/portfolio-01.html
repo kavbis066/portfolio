@@ -11,8 +11,8 @@
     crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -25,9 +25,9 @@
         </button>
         <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="index.html#project" class="nav__link">Projects</a></li>
+                <li class="nav__item"><a href="/index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="/index.html#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="/index.html#project" class="nav__link">Projects</a></li>
             </ul>
         </nav>
     </header>
@@ -35,17 +35,32 @@
     
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
-            The title <strong>of my project</strong>
+             <strong>Artisan Mart</strong>
         </h1>
-        <p class="section__subtitle section__subtitle--intro">a short subtitle</p>
-        <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        <p class="section__subtitle section__subtitle--intro">A Django Application</p>
+        <img src="../img/portfolio-01.jpg" alt="" class="intro__img">
     </section>
 
     <div class="portfolio-item-individual">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ex quisquam tempora, explicabo consectetur accusamus natus laborum in aut debitis!</p>
-        <img src="img/portfolio-03.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consectetur modi dolor voluptatum unde dolorum eum officia harum maxime ab.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quia vel voluptatum temporibus ad eligendi similique, provident iure inventore nobis?</p>
+        <p>
+            This was a project I created as a part of my course project in November 2019. The idea was to 
+            develop an e-commerce website where local artisans can sell their handicrafts at a reasonable price.
+        </p>
+        <p>
+            I was the sole creator of the project. I was able to establish login and register for the website.
+            For the look and feel I have used a free template and modified it using Django.
+        </p>
+        <h3>Technologies:</h3>
+        <ul>
+            <li>Django</li>
+            <li>Database: SQLite</li>
+            <li>HTML/CSS/JavaScript</li>
+        </ul>
+
+        <h4>Login page form:</h4>
+        <img class="intro__img" src="../img/project1.1.JPG" alt="Login page view">
+        <h4>Register page form:</h4>
+        <img class="intro__img" src="../img/project1.2.JPG" alt="Register page view">
     </div>
 
     <!-- Footer -->
