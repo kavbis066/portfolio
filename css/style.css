@@ -370,6 +370,19 @@ nav{
     margin: 1em;
 }
 
+@media (min-width: 300px) and (max-width: 600px){
+    .my-project{
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
 .project-card {
     width: 300px;
     height: 500px;
@@ -381,7 +394,6 @@ nav{
     background: var(--clr-accent);
     overflow: hidden;
 }
-
 
 .project-container {
     display: grid;
@@ -403,6 +415,14 @@ hr {
 .project-link {
     text-decoration: none;
 }
+
+/* Blog */
+
+.my-blog{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 
 /* Footer */
 
