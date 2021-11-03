@@ -1,12 +1,24 @@
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelectorAll('.nav__link');
+const navToggler = document.querySelector('.nav-toggler');
+const navMenu = document.querySelector('.navbar ul');
+const navLinks = document.querySelectorAll('.navbar a');
 
-navToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-});
+// Load all eventListeners
+allEventListeners();
 
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('nav-open');
-    });
-});
+// functions of all events
+function allEventListeners() {
+    navToggler.addEventListener('click', togglerClick);
+    navLinks.forEach(link => 
+        link.addEventListener('click', navLinkClick));
+}
+
+function togglerClick() {
+    navToggler.classList.toggle('toggler-open');
+    navMenu.classList.toggle('open');
+}
+
+function navLinkClick() {
+    if(navMenu.classList.contains('open')) {
+        navToggler.click();
+    }
+}
