@@ -457,6 +457,11 @@ hr {
     text-decoration: none;
 }
 
+.github-btn {
+    text-align: center;
+    margin-top: 1.2em;
+}
+
 /* Blog */
 
 .my-blog{
