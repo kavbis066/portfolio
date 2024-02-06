@@ -1,13 +1,13 @@
-*, *::before, *::after{
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
 /* Custom properties */
-:root{
+:root {
     --ff-primary: 'Source Sans Pro', sans-serif;
     --ff-secondary: 'Sans Code Pro', monospace;
-    --fw-reg: 300;
-    --fw-bold:900;
+    --fw-reg: 400;
+    --fw-bold:700;
 
     --clr-light: #fff;
     --clr-dark: #303030;
@@ -22,7 +22,7 @@
           0.125rem 0.125rem 0.25rem rgba(0,0,0,.15);
 }
 
-@media (min-width:800px){
+@media (min-width:800px) {
     :root{
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -33,11 +33,11 @@
 
 /* General styles */
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background: var(--clr-light);
     color: var(--clr-dark);
     margin: 0;
@@ -50,12 +50,12 @@ body{
     padding: 5em 2em;
 } */
 
-img{
+img {
     display: block;
     max-width: 100%;
 }
 
-strong{ font-weight: var(--fw-bold); }
+strong { font-weight: var(--fw-bold); }
 
 :focus {
     outline: 3px solid var(--clr-accent);
@@ -68,7 +68,7 @@ span {
 
 /* Buttons */
 
-.btn{
+.btn {
     display: inline-block;
     padding: .5em 1.5em;
     background: var(--clr-accent);
@@ -82,49 +82,49 @@ span {
     transition: transform 200ms ease-in-out;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.1);
 }
 
 /* Typography */
 
-h1, h2, h3{
+h1, h2, h3 {
     line-height: 1.1;
     margin: 0;
 }
 
-h1{ font-size: var(--fs-h1); }
+h1 { font-size: var(--fs-h1); }
 
-h2{ font-size: var(--fs-h2); }
+h2 { font-size: var(--fs-h2); }
 
-h3{ font-size: var(--fs-h3); }
+h3 { font-size: var(--fs-h3); }
 
-.section__title{
+.section__title {
     margin-bottom: .25em;
 }
 
-.section__title--intro{
+.section__title--intro {
     font-weight: var(--fw-reg);
 }
 
-.section__title--intro strong{
+.section__title--intro strong {
     display: block;
 }
 
-.section__subtitle{
+.section__subtitle {
     margin: 0;
     font-size: var(--fs-h3);
 }
 
 .section__subtitle--intro,
-.section__subtitle--about{
+.section__subtitle--about {
     background: var(--clr-accent);
     font-family: var(--ff-secondary);
     padding: .25rem 1rem;
     margin-bottom: 1rem;
 }
 
-.section__subtitle--project{
+.section__subtitle--project {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
@@ -286,22 +286,22 @@ h3{ font-size: var(--fs-h3); }
 
 /* Intro section */
 
-.intro{
+.intro {
     position: relative;
     padding: 2em;
 }
 
-.intro__img{
+.intro__img {
     box-shadow: var(--bs);
     filter: grayscale(100%);
 }
 
-.section__subtitle--intro{
+.section__subtitle--intro {
     display: inline-block;
 }
 
-@media (min-width:600px){
-    .intro{
+@media (min-width:600px) {
+    .intro {
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -312,7 +312,7 @@ h3{ font-size: var(--fs-h3); }
         grid-template-columns: min-content max-content;
     }
 
-    .intro__img{
+    .intro__img {
         grid-area: img;
         min-width: 250px;
         position: relative;
@@ -341,141 +341,103 @@ h3{ font-size: var(--fs-h3); }
     padding: 0.5em;
 }
 
-@media (min-width:600px){
-    .about-me{
+@media (min-width:600px) {
+    .about-me {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas: "title" "subtitle" "text";
         grid-column-gap: 2em;
     }
 
-    .section__title--about{
+    .section__title--about {
         grid-area: title;
     }
 
-    .section__subtitle--about{
+    .section__subtitle--about {
         grid-column: -1 / 1;
         grid-row: 2;
         position: relative;
         left: -1em;
         width: calc(100% + 2em);
     }
-
-    .about-me__more {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2em;
-    }
-
-    .about-me__more ul {
-        list-style: none;
-        margin-left: -2em;       
-    }
-
-    .love {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        gap: 2em;
-    }
-    
-    .fa-plus {
-        color: var(--clr-accent);
-    }
-}
-
-@media (min-width: 300px){
-    .about-me__more{
-        margin-top: 1.5em;
-    }
-
-    .about-me__more ul {
-        list-style: none;
-        margin-left: -2em;       
-    }
-
-    .love {
-        display: flex;
-        align-items: center;
-        gap: 2em;
-    }
-
-    .fa-plus {
-        color: var(--clr-accent);
-    }
 }
 
 /* Projects section */
-.my-project{
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto;
+.section__title--project {
+    font-size: 2.5rem;
 }
 
-.subtext {
+.my-project {
+    margin: 1.5rem auto;
+    padding: 0.5em;
+    max-width: 840px;
+}
+
+/* .subtext {
     font-size: 15px;
     font-weight: var(--fw-reg);
     margin: 1em;
-}
-
-@media (min-width: 300px) and (max-width: 600px){
-    .my-project{
-        text-align: center;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
-
-    .project-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-}
-
-.project-card {
-    width: 300px;
-    height: 500px;
-    box-shadow: var(--bs);
-    margin: 10px;
-}
-
-.project-card:nth-of-type(odd){
-    background: var(--clr-accent);
-    overflow: hidden;
-}
+} */
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
-.project-image {
-    margin: 0 auto;
-    padding: 10px;
-    width: 250px;
-    border-radius: 125px;
+.card {
+    width: 25.16rem;
+    background-color: var(--clr-light);
+    box-shadow: var(--bs);
+    /* border-radius: 10px; */
 }
 
-hr {
-    margin-left: 20px;
-    margin-right: 20px;
+.card__title {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw-bold);
 }
 
-.project-link {
-    text-decoration: none;
+.card__image {
+    overflow: hidden;
+    height: 15.3rem;
+    /* border-radius: 10px 10px 0 0; */
 }
 
-.github-btn {
-    text-align: center;
-    margin-top: 1.2em;
+.card__image > img {
+    width: 100%;
+    height: 100%;
 }
 
-/* Blog */
-
-.my-blog{
-    max-width: 1000px;
-    margin: 0 auto;
+.card__main {
+    padding: 1rem;
 }
 
+.card__content > p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    /* padding: 24px 0; */
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 840px;
+        height: 245px;
+        display: grid;
+        grid-template-columns: 280px auto;
+        margin-top: 1.2rem;
+    }
+
+    .card__img {
+        /* flex: 1 0 285px; */
+        height: 100%;
+        /* border-radius: 10px 0 0 10px; */
+    }
+
+    .card__img > img {
+        width: 100%;
+    }
+}
 
 /* Footer */
 
