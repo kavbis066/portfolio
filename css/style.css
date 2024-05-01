@@ -489,6 +489,17 @@ h3 { font-size: var(--fs-h3); }
     font-weight: 400;
 }
 
+.noteworthy-cards__item a,
+.noteworthy-cards__item a:visited {
+    font-weight: bold;
+    color: var(--clr-dark);
+}
+
+.noteworthy-cards__item a:hover {
+    background-color: var(--clr-accent);
+    text-decoration: none;
+}
+
 /* Footer */
 
 .footer{
