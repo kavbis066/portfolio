@@ -369,15 +369,16 @@ h3 { font-size: var(--fs-h3); }
     .cards__content {
         margin-top: -80px;
         text-align: center;
-        padding: 0 30px;
+        /* padding: 0 30px; */
+        padding: 40px 30px;
     }
 }
 
-@media screen and (max-width: 576px) {
+/* @media screen and (max-width: 576px) {
     .cards__content {
         padding: 0;
     }
-}
+} */
 
 /* .cards__code {
     color: #7b7992;
