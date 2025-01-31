@@ -429,7 +429,7 @@ h3 { font-size: var(--fs-h3); }
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
-    width: 5rem;
+    /* width: 5rem; */
 }
 
 .noteworthy-container {
