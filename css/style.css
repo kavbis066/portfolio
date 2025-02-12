@@ -532,13 +532,14 @@ h3 { font-size: var(--fs-h3); }
     font-weight: var(--fw-bold);
 }
 
-.footer__link:hover,
+/* .footer__link:hover, */
 .social-list__link:hover{
     opacity: .7;
 }
 
 .footer__link:hover{
     text-decoration: underline;
+    background-color: var(--clr-accent);
 }
 
 .social{
