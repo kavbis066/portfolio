@@ -4,424 +4,329 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaveri Biswas - Portfolio Website</title>
+    <title>Kaveri Biswas — Frontend Developer & Data Storyteller</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" 
-    crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="js/main.js" defer></script> -->
 </head>
 <body>
-    <!-- Introduction -->
-    <section class="intro" id="home">
-        <h1 class="section__title section__title--intro">
-            Hello, I am <strong>Kaveri Biswas</strong>
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">
-            <span>Web Developer at BBC News</span>
-        </p>
-        <img src="img/KaveriBiswas-headshot.jpg" alt="a picture of kaveri biswas smiling" class="intro__img">
-    </section>
-
-    <!-- About me -->
-    <section class="about-me" id="about">
-        <div class="about-me__body">
-            <p>
-                Frontend developer and data storyteller with 6+ years of professional software development experience, specializing in 3+ years of interactive data 
-                journalism and visual storytelling. I translate complex datasets into award-winning, human-centered digital experiences using <strong>JavaScript, D3.js, HTML, CSS (SASS) 
-                </strong> and modern web technologies.
-            </p>
-            <p>
-                My work sits at the intersection of code, design, and journalism—collaborating closely with writers, editors, researchers, and designers to <strong>create 
-                interactive narratives</strong> that reach millions of viewers across <strong>40 languages</strong>. I'm passionate about <strong>web accessibility, responsive design</strong>, 
-                and crafting experiences that make data meaningful, memorable, and <strong>accessible to diverse global audiences</strong>.
-            </p>
-            <p>
-                When I'm not coding, you'll find me playing violin, sketching, reading, or exploring the best eateries in Delhi.
-            </p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="navbar__logo">
+                <a href="#home">Kaveri Biswas</a>
+            </div>
+            <button class="nav-toggler" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navbar__menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#work" class="nav-link">Work</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <!-- Projects -->
-    <section class="my-project" id="project">
-        <h2 class="section__title section__title--project">Projects</h2>
-
-        <!-- Project card -->
-        <div class="project-container cards">
-            <div class="cards__wrapper">
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img 
-                            src="https://ichef.bbc.co.uk/images/ic/raw/p0nqy8vc.jpg" 
-                            alt="Image shows a girl sitting with a cup of coffee where she is surrounded by various social media apps">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/hindi/resources/idt-ee5db36c-cbd0-4e40-97d7-7760a30f4b5d" target="_blank">
-                                Always Online. Rarely Connected.
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            <strong>My first byline:</strong> A data-driven longform feature exploring the <strong>growing loneliness epidemic</strong> in an increasingly connected world. 
-                            I took full ownership of this project—conducting in-depth primary research interviews, analyzing public health datasets, creating interactive data visualizations, 
-                            designing the visual narrative flow, and developing the immersive storytelling experience from concept to launch. <strong>Published across six Indian languages,</strong> 
-                            this piece demonstrated how frontend development serves journalism, turning complex sociological research into an accessible, emotionally resonant 
-                            digital story.
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>Reporting</li>
-                                <li>Data Visualization</li>
-                                <li>GSAP</li>
-                                <li>Interactive Storytelling</li>
-                                <li>Multilingual</li>
-                            </ul>
-                        </div>
+    <!-- Hero/Intro Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">
+                        I create <span class="highlight">interactive narratives</span> from data
+                    </h1>
+                    <p class="hero__subtitle">
+                        Frontend developer and data storyteller at BBC News. I translate complex datasets into award-winning digital experiences that reach millions across 40+ languages.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#work" class="btn btn--primary">View My Work</a>
+                        <a href="#contact" class="btn btn--secondary">Get in Touch</a>
                     </div>
                 </div>
 
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img 
-                            src="img/project/delhi.jpg" 
-                            alt="Image shows map of Delhi with pre-rendered raster tiles of surface temperature">
+                <div class="hero__stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6">0</div>
+                        <span class="stat-label">Years of Experience</span>
                     </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/hindi/resources/idt-6b9c5302-fefa-4639-b933-b4bb728f6e18" target="_blank">
-                                From Delhi to Chennai, Indian cities are getting hotter
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            Built an immersive interactive exploration of urban heat inequality across six Indian cities, combining <strong>interactive heatmaps (MapLibre with pre-rendered 
-                            raster tiles, zoom levels 9–15)</strong> with Canvas API animations that reveal two decades of urban expansion from 2000–2020 using Landsat satellite imagery. 
-                            This sophisticated geospatial visualization project demonstrates the power of combining low-level charting and mapping libraries to create engaging storytelling 
-                            experiences that communicate climate data at both granular and landscape scales.
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>MapLibre</li>
-                                <li>Canvas API</li>
-                                <li>Heatwave</li>
-                                <li>scrolltrigger</li>
-                                <li>satellite data</li>
-                                <li>geospatial</li>
-                            </ul>
-                        </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="40">0</div>
+                        <span class="stat-label">Languages Reached</span>
                     </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img 
-                            src="https://news.files.bbci.co.uk/include/vjsthasia/2722-north-south-delimitation/assets/app-project-assets/img/thumbnail-new.jpg" 
-                            alt="Image shows an illustration of parliament of India from inside">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/hindi/resources/idt-db536fb8-5b2a-429e-87a4-9dbec994463e" target="_blank">
-                                Delimitation of Lok Sabha
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            Built an interactive data visualisation explaining parliamentary seat distribution and the impact of <strong>delimitation</strong>, 
-                            using <strong>SVG</strong> and <strong>GSAP</strong>. A grid of rectangles represents seats and transforms into state-wise layouts through smooth 
-                            <strong>animation</strong>, efficient <strong>DOM transformations</strong>, and <strong>performance optimisation</strong>, making complex electoral 
-                            data intuitive and engaging across devices.
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>gsap</li>
-                                <li>scrolltrigger</li>
-                                <li>Delimitation</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img src="img/project/delhi-air-pollution.jpg" alt="A person with mask and in background is pollution">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/hindi/resources/idt-a1309619-0ea5-4d6b-a2ca-40b8ef9fadc2" target="_blank">
-                                How bad is Delhi's air?
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            <strong>Award-winning data visualization</strong> (Best Data Visualization, WAN INFRA 2025). Built an interactive visualization analyzing 11 years of air 
-                            quality data across Indian cities using <strong>GSAP-powered animations and real-time API integration</strong>. Hundreds of SVG rectangles dynamically transform 
-                            into bar charts revealing long-term PM2.5 trends, while an interactive hero carousel enables seamless exploration across multiple cities with hourly updates from 
-                            IQAir's API. This project demonstrates how animation, real-time data, and intuitive interaction design transform environmental data into engaging, accessible 
-                            storytelling.
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>gsap</li>
-                                <li>scrolltrigger</li>
-                                <li>IQAir API</li>
-                                <li>air quality</li>
-                                <li>real time data</li>
-                                <li>award-winning</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img src="img/project/mahakumbh.jpg" alt="Drone footage of Kumbh Mela ground.">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/hindi/resources/idt-725275a9-8a51-4cca-920b-633bf9722570" target="_blank">
-                                Maha Kumbh - Behind the world's largest gathering
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            This visual explainer on Maha Kumbh Mela uses scrollamation with SVGs to illustrate the world’s largest human gathering, where millions take 
-                            a holy dip at the confluence of three sacred rivers in Prayagraj, India. It was published in <strong>7 languages.</strong>
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>html</li>
-                                <li>css</li>
-                                <li>scrolltrigger</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img src="img/project/india-election.png" alt="Madhya Pradesh Vidhan Sabha elections 2023">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">Live Election Coverage</div>
-                        <div class="cards__text">
-                            Led frontend development for comprehensive live election coverage platforms across South Asia, serving 40+ million users during peak traffic with zero downtime. 
-                            Recent projects include:
-                            <ul>
-                                <li>
-                                    <strong>2026 General Elections:</strong> <a href="https://www.bbc.com/bengali/resources/idt-12e6dcd9-2189-4c28-aafb-b106e6d01189" target="_blank">
-                                        Bangladesh</a> (4+ lac pageviews) and <a href="https://www.bbc.com/nepali/articles/clygg5zd6xyo" target="_blank">Nepal—real-time</a> results 
-                                        dashboards with dynamic data visualizations
-                                </li>
-                                <li>
-                                    <a href="https://www.bbc.co.uk/news/resources/idt-0385e7a0-3feb-4ab7-ab78-d80ad189e347" target="_blank">2024 India Lok Sabha Election</a>: Scalable frontend systems 
-                                    and interactive results tools across 7 languages (5.5+ lac pageviews)
-                                </li>
-                                <li>
-                                    <a href="https://www.bbc.com/urdu/resources/idt-b59624af-2f22-4de5-91f0-46e78c43d2c4" target="_blank">2024 Pakistan General Elections</a>: Real-time 
-                                    coverage platform
-                                </li>
-                                <li>
-                                    2023 India Legislative Assembly Elections: <a href="https://www.bbc.com/hindi/resources/idt-f678540c-cb25-4dcd-8cab-8de65ce9474f" target="_blank">
-                                        Chhattisgarh</a> and <a href="https://www.bbc.co.uk/news/resources/idt-ce9e6ff7-d0d2-4eab-95ec-0b33afdd79a8" target="_blank">
-                                            Madhya Pradesh
-                                        </a> (12.8+ lac views)
-                                </li>
-                            </ul>
-                            Each project required building robust, performant frontends capable of handling massive traffic spikes, integrating real-time data pipelines, and ensuring 
-                            accessibility across diverse audiences and devices. My work focused on creating intuitive interfaces that make electoral data transparent and engaging for 
-                            millions of voters across multiple languages and regions.
-
-                            <!-- <a href="https://www.bbc.com/nepali/articles/clygg5zd6xyo" target="_blank">Nepal</a>. 
-                            Live results coverage of
-                            <a href="https://www.bbc.com/bengali/resources/idt-12e6dcd9-2189-4c28-aafb-b106e6d01189" target="_blank">Bangladesh General Election 2026</a>
-                             which gained 4lac page views and                              
-                            <a href="https://www.bbc.co.uk/news/resources/idt-0385e7a0-3feb-4ab7-ab78-d80ad189e347">India Lok Sabha Election 2024</a> 
-                            was published in 7 languages which gained <strong>5.5 lac page views.</strong>
-                            We also did live results coverage of 2024 General Elections in
-                            <a href="https://www.bbc.com/urdu/resources/idt-b59624af-2f22-4de5-91f0-46e78c43d2c4" target="_blank">Pakistan</a>
-                            Legislative assembly elections 2023 in India for
-                            <a href="https://www.bbc.com/hindi/resources/idt-f678540c-cb25-4dcd-8cab-8de65ce9474f" target="_blank">Chhattisgarh</a>, and 
-                            <a href="https://www.bbc.co.uk/news/resources/idt-ce9e6ff7-d0d2-4eab-95ec-0b33afdd79a8" target="_blank">Madhya Pradesh</a>
-                            which gained
-                            <strong>12.8 lac views.</strong> -->
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>html</li>
-                                <li>css</li>
-                                <li>d3</li>
-                                <li>Maplibre</li>
-                                <li>live data</li>
-                                <li>real-time</li>
-                                <li>election coverage</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img src="img/project/indigenuos.png" alt="Indigenous Languages of Brazil">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/portuguese/resources/idt-2779c755-7af1-495a-a41c-d02995e459b8" target="_blank">
-                                Indigenous Languages of Brazil
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            This article was published in portuguese where it talks about the diversity of native languages spoken in Brasil by using
-                            clustered bubble charts, audios, maps and, graphics.
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>html</li>
-                                <li>css</li>
-                                <li>d3</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img src="img/project/vyapam.png" alt="Vyapam: The suspected deaths linked to India exam scam">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/hindi/resources/idt-1289e9ac-05bf-4605-a497-d4a5690aac68" target="_blank">
-                                Vyapam: The suspected deaths linked to India exam scam
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            An investigative article about India's largest scam centered on Madhya Pradesh's Vyapam creatively put together by
-                            css art and particle animation.
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>html</li>
-                                <li>css</li>
-                                <li>particle</li>
-                                <li>js</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cards__item">
-                    <div class="cards__img">
-                        <img src="img/project/stadium.png" alt="World Cup: Ways to keep stadium cool">
-                    </div>
-                    <div class="cards__content">
-                        <div class="cards__title">
-                            <a href="https://www.bbc.com/arabic/resources/idt-8a2fc374-12d4-4875-8aa6-d3612d93af96" target="_blank">
-                                World Cup: Ways to keep stadium cool
-                            </a>
-                        </div>
-                        <div class="cards__text">
-                            Understanding the science behind keeping the football stadium cool in Qatar which hosted the 2022 FIFA World Cup.
-                            This article was published in <strong>30 languages.</strong>
-                        </div>
-                        <div class="cards__tag">
-                            <ul>
-                                <li>html</li>
-                                <li>css</li>
-                            </ul>
-                        </div>
+                    <div class="stat-item">
+                        <div class="stat-number">40M+</div>
+                        <span class="stat-label">Global Reach</span>
                     </div>
                 </div>
             </div>
+
+            <div class="hero__image">
+                <img src="img/KaveriBiswas-headshot.jpg" alt="Kaveri Biswas" class="hero__img">
+            </div>
         </div>
+    </section>
 
-        <div class="noteworthy-container">
-            <h2 class="section__title section__title--noteworthy">Other noteworthy projects</h2>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about__content">
+                <div class="about__text">
+                    <p class="about__intro">
+                        I'm a frontend engineer passionate about making complex data accessible, memorable, and meaningful to diverse global audiences. My work bridges code, design, and storytelling.
+                    </p>
 
-            <ul class="noteworthy-cards">
-                <li class="noteworthy-cards__item">
-                    <div class="noteworthy-card">
-                        <div class="noteworthy-card__content">
-                            <h2 class="noteworthy-card__title">Pre election projects</h2>
-                            <p class="noteworthy-card__text">
-                                As part of the pre-election material, we have created
-                                <a href="https://www.bbc.com/bengali/news-67883948" target="_blank">manifesto</a>,
-                                and <a href="https://www.bbc.com/nepali/news-63622553" target="_blank">candidate profile</a> for the audiences to better
-                                understand the candidate they choose.
-                            </p>
+                    <div class="expertise">
+                        <h3 class="expertise__title">Core Skills</h3>
+                        <div class="expertise__list">
+                            <span class="tag">JavaScript (ES6+)</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">GSAP & Scroll Trigger</span>
+                            <span class="tag">Data Visualization</span>
+                            <span class="tag">MapLibre & Geospatial</span>
+                            <span class="tag">HTML/CSS/SASS</span>
+                            <span class="tag">Web Accessibility</span>
+                            <span class="tag">Responsive Design</span>
                         </div>
                     </div>
-                </li>
-                <li class="noteworthy-cards__item">
-                    <div class="noteworthy-card">
-                        <div class="noteworthy-card__content">
-                            <h2 class="noteworthy-card__title">
-                                <a href="https://www.bbc.com/hindi/resources/idt-24fbcb2a-5cae-43d8-97b7-4ce240c423df" target="_blank">
-                                    100 years of Dev Anand
-                                </a>
-                            </h2>
-                            <p class="noteworthy-card__text">
-                                This was a celebratory piece where we celebrated 100 years of Dev Anand with illustrations and animations.
-                            </p>
+
+                    <p class="about__closing">
+                        When I'm not coding, you'll find me playing violin, sketching, reading, or exploring the best eateries in Delhi.
+                    </p>
+                </div>
+
+                <aside class="about__sidebar">
+                    <div class="highlight-box">
+                        <h3>Current Role</h3>
+                        <p>Web Developer at <strong>BBC News</strong></p>
+                        <p class="text-small">Specializing in interactive data journalism and visual storytelling</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Work</h2>
+            
+            <div class="featured__project">
+                <div class="featured__image">
+                    <img src="https://ichef.bbc.co.uk/images/ic/raw/p0nqy8vc.jpg" alt="Always Online. Rarely Connected project">
+                    <div class="featured__badge">Award-Winning</div>
+                </div>
+                <div class="featured__content">
+                    <h3 class="featured__title">Always Online. Rarely Connected.</h3>
+                    <p class="featured__description">
+                        My first byline: A data-driven longform feature exploring the growing loneliness epidemic in an increasingly connected world. I took full ownership—conducting primary research, analyzing public health datasets, creating interactive visualizations, and designing the immersive storytelling experience.
+                    </p>
+                    <div class="featured__meta">
+                        <span class="meta-badge">Reporting</span>
+                        <span class="meta-badge">Data Visualization</span>
+                        <span class="meta-badge">GSAP</span>
+                        <span class="meta-badge">6 Languages</span>
+                    </div>
+                    <a href="https://www.bbc.com/hindi/resources/idt-ee5db36c-cbd0-4e40-97d7-7760a30f4b5d" target="_blank" class="btn btn--primary">Read Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects" id="work">
+        <div class="container">
+            <h2 class="section-title">Other Projects</h2>
+
+            <div class="projects__grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project/delhi.jpg" alt="From Delhi to Chennai, Indian cities are getting hotter">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">
+                            <a href="https://www.bbc.com/hindi/resources/idt-6b9c5302-fefa-4639-b933-b4bb728f6e18" target="_blank">
+                                Indian Cities Getting Hotter
+                            </a>
+                        </h3>
+                        <p class="project-card__description">
+                            Interactive exploration of urban heat inequality across six Indian cities using heatmaps and Canvas animations revealing two decades of urban expansion.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>MapLibre</span>
+                            <span>Canvas API</span>
+                            <span>Geospatial</span>
                         </div>
                     </div>
-                </li>
-                <li class="noteworthy-cards__item">
-                    <div class="noteworthy-card">
-                        <div class="noteworthy-card__content">
-                            <h2 class="noteworthy-card__title">
-                                <a href="https://www.bbc.com/urdu/resources/idt-de7b137d-a07f-4598-a039-12bc97258e46" target="_blank">
-                                    Inflation calculator
-                                </a>
-                            </h2>
-                            <p class="noteworthy-card__text">
-                                I have worked on creating inflation calculator for Pakistan where an individual can check their personal inflation rate
-                                based on their daily expenditure.
-                            </p>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="https://news.files.bbci.co.uk/include/vjsthasia/2722-north-south-delimitation/assets/app-project-assets/img/thumbnail-new.jpg" alt="Delimitation of Lok Sabha">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">
+                            <a href="https://www.bbc.com/hindi/resources/idt-db536fb8-5b2a-429e-87a4-9dbec994463e" target="_blank">
+                                Delimitation of Lok Sabha
+                            </a>
+                        </h3>
+                        <p class="project-card__description">
+                            Interactive data visualization explaining parliamentary seat distribution using SVG and smooth GSAP animations.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>GSAP</span>
+                            <span>SVG</span>
+                            <span>Election Data</span>
                         </div>
                     </div>
-                </li>
-            </ul>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project/delhi-air-pollution.jpg" alt="How bad is Delhi's air?">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">
+                            <a href="https://www.bbc.com/hindi/resources/idt-a1309619-0ea5-4d6b-a2ca-40b8ef9fadc2" target="_blank">
+                                How Bad is Delhi's Air?
+                            </a>
+                        </h3>
+                        <p class="project-card__description">
+                            Award-winning visualization analyzing 11 years of air quality data with real-time API integration and GSAP animations.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>GSAP</span>
+                            <span>Real-time Data</span>
+                            <span>Award-Winning</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project/mahakumbh.jpg" alt="Maha Kumbh - Behind the world's largest gathering">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">
+                            <a href="https://www.bbc.com/hindi/resources/idt-725275a9-8a51-4cca-920b-633bf9722570" target="_blank">
+                                Maha Kumbh Mela
+                            </a>
+                        </h3>
+                        <p class="project-card__description">
+                            Visual explainer using scrollamation and SVGs to illustrate the world's largest human gathering.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>SVG</span>
+                            <span>Scroll Animation</span>
+                            <span>7 Languages</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project/india-election.png" alt="Live Election Coverage">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">Live Election Coverage</h3>
+                        <p class="project-card__description">
+                            Frontend lead for real-time election coverage across South Asia serving 40M+ users during peak traffic.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>D3.js</span>
+                            <span>Real-time Data</span>
+                            <span>Scale</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <div class="project-card__image">
+                        <img src="img/project/indigenuos.png" alt="Indigenous Languages of Brazil">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">
+                            <a href="https://www.bbc.com/portuguese/resources/idt-2779c755-7af1-495a-a41c-d02995e459b8" target="_blank">
+                                Indigenous Languages of Brazil
+                            </a>
+                        </h3>
+                        <p class="project-card__description">
+                            Clustered bubble charts, audio, maps and graphics exploring Brazil's native language diversity.
+                        </p>
+                        <div class="project-card__tags">
+                            <span>D3.js</span>
+                            <span>Data Viz</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Work Together</h2>
+            
+            <div class="contact__content">
+                <p class="contact__text">
+                    Have a project in mind? I'd love to hear about it. Reach out and let's create something meaningful together.
+                </p>
+
+                <div class="contact__methods">
+                    <a href="mailto:biswaskaveri66@gmail.com" class="contact__link">
+                        <i class="fas fa-envelope"></i>
+                        biswaskaveri66@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact__social">
+                    <a href="https://github.com/kavbis066" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kaveri-biswas-7a4504aa/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/BiswasKaveri" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter/X">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.953 4.57a10 10 0 002.856-3.915 10 10 0 01-2.956 1.007 4.852 4.852 0 002.126-2.667 9.858 9.858 0 01-3.127 1.184 4.821 4.821 0 00-8.216 4.397A13.709 13.709 0 011.671 3.149a4.822 4.822 0 001.493 6.43 4.783 4.783 0 01-2.191-.589v.061a4.823 4.823 0 003.87 4.726 4.829 4.829 0 01-2.179.085 4.824 4.824 0 004.505 3.352A9.673 9.673 0 010 19.539a13.681 13.681 0 007.408 2.171c8.89 0 13.74-7.337 13.74-13.74 0-.209-.005-.418-.015-.623a9.758 9.758 0 002.391-2.471z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
-        <h3>Let's get in touch!</h3>
-        <p>If you have a project in mind or just want to chat, feel free to drop a line below:<br>
-            <a href="mailto:biswaskaveri66@gmail.com" class="footer__link">
-                <i class="fas fa-envelope"></i> biswaskaveri66@gmail.com
-            </a>
-        </p>
-
-        <div class="social-container">
-            <ul class="social">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/kavbis066" target="_blank">
-                        <!-- <i class="fab fa-github"></i> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.linkedin.com/in/kaveri-biswas-7a4504aa/"
-                        target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://twitter.com/BiswasKaveri"
-                        target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">
+                Designed & built with <span class="heart">♥</span> using vanilla HTML, CSS & JavaScript
+            </p>
+            <p class="footer__credit">
+                © 2024 Kaveri Biswas. All rights reserved.
+            </p>
         </div>
     </footer>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
