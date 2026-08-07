@@ -251,6 +251,33 @@ function initLazyLoading() {
 }
 
 // ============================================
+// Expandable Content
+// ============================================
+
+function initExpandable() {
+    const expandButtons = document.querySelectorAll('[class*="__expand"]');
+    
+    expandButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const detailsId = this.getAttribute('aria-controls');
+            const details = document.getElementById(detailsId);
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            
+            if (isExpanded) {
+                details.hidden = true;
+                this.setAttribute('aria-expanded', 'false');
+                this.textContent = 'Show Details';
+            } else {
+                details.hidden = false;
+                this.setAttribute('aria-expanded', 'true');
+                this.textContent = 'Show Less';
+            }
+        });
+    });
+}
+
+// ============================================
 // Initialize Everything
 // ============================================
 
@@ -265,6 +292,7 @@ function init() {
     initAccessibility();
     initPerformanceMonitoring();
     initLazyLoading();
+    initExpandable();
     
     console.log('Portfolio site initialized.');
 }
